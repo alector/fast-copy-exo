@@ -15,13 +15,20 @@ const CopySingleItem = async (inputPath, outputPath, fileName) => {
 }
 
 const fastCopy = async (copyPath, pastePath) => {
-  // /Users/panos/PPCode/alyra/alyra-02-git-node/fast-copy-exo\statit-copy
+  // /Users/panos/PPCode/alyra/alyra-02-git-node/fast-copy-exo/statit-copy
+
+  ///Userspanos/PPCode/alyra/alyra-02-git-node/fast-copy-exo/statit-copy/file1.txt
+
+  // Userspanos/PPCode/alyra/alyra-02-git-node/fast-copy-exo
+
   const myBaseDir = path.dirname(__filename)
   const inputPath = path.join(myBaseDir, copyPath)
   const outputPath = path.join(myBaseDir, pastePath)
 
   // console.log(inputPath)
   const entries = await fsPromises.readdir(inputPath, { withFileTypes: true })
+
+  console.log("entries", entries)
 
   file1 = entries[1].name
   console.log(file1)
