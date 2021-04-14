@@ -40,5 +40,6 @@ if (require.main === module) {
 
   const bbb = getFilesRecursive(inputPath)
   console.log(bbb)
+
   // test blabla
 }
